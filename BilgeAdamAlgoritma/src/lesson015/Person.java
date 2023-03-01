@@ -1,22 +1,15 @@
 package lesson015;
 
 public class Person {
-	private int age;
+
 	private String name;
 	private String surname;
-	
-	public Person( String name, String surname,int age) {
+	private int age;
+
+	public Person(String name, String surname, int age) {
 		super();
-		this.age = age;
 		this.name = name;
 		this.surname = surname;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -35,12 +28,17 @@ public class Person {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 	
 	public void bilgileriGoster() {
 		System.out.println("Person sınıfı çalıştı");
 	}
-
-	
 
 }

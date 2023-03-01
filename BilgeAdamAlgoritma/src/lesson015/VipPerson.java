@@ -1,11 +1,14 @@
 package lesson015;
 
-public class VipPerson extends Person{
+
+public class VipPerson extends Person {
+
 	private String vipNo;
 
-	public VipPerson( String name, String surname,int age, String vipNo) {
-		super(name, surname,age);
+	public VipPerson(String name, String surname, int age, String vipNo) {
+		super(name, surname, age);
 		this.vipNo = vipNo;
+
 	}
 
 	public String getVipNo() {
@@ -20,4 +23,5 @@ public class VipPerson extends Person{
 	public void bilgileriGoster() {
 		System.out.println("Vip Person sınıfı çalıştı--> "+ getVipNo());
 	}
+
 }

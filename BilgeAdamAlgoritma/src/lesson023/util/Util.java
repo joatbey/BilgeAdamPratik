@@ -1,4 +1,4 @@
-package lesson021;
+package lesson023.util;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,11 +10,11 @@ public class Util {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static int intDegerAlma(String sorgu) {
-		System.out.println("Sayi giriniz");
 		boolean kontrol = false;
 		int deger = 0;
 		do {
 			try {
+				System.out.println(sorgu);
 				deger = Integer.parseInt(scanner.nextLine());
 				kontrol = false;
 			} catch (Exception e) {
@@ -26,11 +26,11 @@ public class Util {
 	}
 	
 	public static double doubleDegerAlma(String sorgu) {
-		System.out.println("Sayi giriniz");
 		boolean kontrol = false;
 		double deger = 0;
 		do {
 			try {
+				System.out.println(sorgu);
 				deger = Double.parseDouble(scanner.nextLine());
 				kontrol = false;
 			} catch (Exception e) {
@@ -58,10 +58,12 @@ public class Util {
 				kontrol =false;
 				//date = LocalDate.parse(date,dateTimeFormatter);
 			} catch (DateTimeParseException e) {
+				System.out.println("Gridiginiz tarih degeri hatalıdır lütfen ornekteki gibi giriniz (2023-01-20)");
 				kontrol =  true;
 			}
 			
 		} while (kontrol);
+		
 		return date;
 	}
 	//how to convert string to localDate
@@ -70,6 +72,6 @@ public class Util {
 	
 	public static void main(String[] args) {
 		LocalDate date = stringTarih();
-		System.out.println(date.getYear());
+		System.out.println(date.getDayOfWeek());
 	}
 }

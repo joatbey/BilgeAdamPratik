@@ -25,14 +25,14 @@ public class Odev {
      try {
          FileReader reader = new FileReader("mars.txt");
 
-         int character; // Current character being read
-         int numChars = 0; // Total number of characters
-         int numWords = 0; // Total number of words
-         int numLines = 0; // Total number of lines
-         Map<String, Integer> wordCounts = new HashMap<String, Integer>(); // Kelime tekrarı
+         int character; // okunan karakter
+         int numChars = 0; 
+         int numWords = 0; 
+         int numLines = 0; 
+         Map<String, Integer> wordCounts = new HashMap<String, Integer>(); // Kelime , tekrarı tutan hashmap 
          String currentWord = ""; // Current word being built
 
-         // Loop through the file one character at a time
+         
          while ((character = reader.read()) != -1) {//-1 if the end of the stream has been reached
             
              numChars++; 
@@ -49,7 +49,7 @@ public class Odev {
                      }
                      currentWord = ""; 
                  }
-                 // If the current character is a newline, increment the line count
+       
                  if (character == '\n') {
                      numLines++;
                  }
